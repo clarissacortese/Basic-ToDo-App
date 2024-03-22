@@ -1,14 +1,31 @@
+/* eslint-disable react/prop-types */
 import Button from "./Button"
 
-function DoneItem({text}) {
+// The DoneItem component is responsible for rendering a single done item.
+// It receives three props: done (the text of the done item), deleteDone (a function to delete the done item), and addTodo (a function to move the done item back to the todo list).
+function DoneItem({done, deleteDone, addTodo}) {
 
-    function handleClick() {}
+    // handleMove is the function that is called when the "Move to to-do" button is clicked.
+    // It calls addTodo with the done item to move it back to the todo list, and then calls deleteDone to remove it from the done list.
+    function handleMove() {
+      addTodo(done);
+      deleteDone(done);
+    }
+
+    // handleDelete is the function that is called when the "Delete" button is clicked.
+    // It calls deleteDone with the done item to remove it from the done list.
+    function handleDelete() {
+      deleteDone(done);
+    }
     
+  // The component renders the text of the done item and two buttons: "Move to to-do" and "Delete".
+  // When the "Move to to-do" button is clicked, handleMove is called.
+  // When the "Delete" button is clicked, handleDelete is called.
   return (
     <>
-    <span>{text}</span>
-    <Button className="repeatButton" text="Move to &quot;to-do&quot;" handleClick={handleClick}></Button>
-    <Button className="deleteButton" text="Permanently delete" handleClick={handleClick}></Button>
+    <span>{done}</span>
+    <Button className="repeatButton" text="Move to &quot;to-do&quot;" handleClick={handleMove}></Button>
+    <Button className="deleteButton" text="Delete" handleClick={handleDelete}></Button>
     </>
   )
 }
