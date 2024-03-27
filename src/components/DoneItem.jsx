@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import Button from "./Button"
+import { MdOutlineCheckBox } from "react-icons/md";
 
 // The DoneItem component is responsible for rendering a single done item.
 // It receives three props: done (the text of the done item), deleteDone (a function to delete the done item), and addTodo (a function to move the done item back to the todo list).
@@ -23,9 +24,9 @@ function DoneItem({done, deleteDone, addTodo}) {
   // When the "Delete" button is clicked, handleDelete is called.
   return (
     <>
-    <span>{done}</span>
-    <Button className="repeatButton" text="Move to &quot;to-do&quot;" handleClick={handleMove}></Button>
-    <Button className="deleteButton" text="Delete" handleClick={handleDelete}></Button>
+    <MdOutlineCheckBox className="inline mr-2"/>{done}
+    <Button className="repeatButton ml-2" text="Move to &quot;to-do&quot;" handleClick={handleMove}></Button>
+    <Button className="deleteButton ml-2" text="Delete" handleClick={handleDelete}></Button>
     </>
   )
 }

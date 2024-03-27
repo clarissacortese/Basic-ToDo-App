@@ -20,7 +20,7 @@ function Form({ addTodo }) {
     <>
     <h2>Add a new to-do</h2>
     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Add todo"/>
+      <input type="text" placeholder="Add todo" required/>
       <button type="submit" className="submitButton">Add</button>
     </form>
     </>
