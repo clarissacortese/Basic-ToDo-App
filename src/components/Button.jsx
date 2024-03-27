@@ -12,4 +12,4 @@ function Button({ className, text, handleClick }) {
   );
 }
 
-export default Button
+export default Button;
