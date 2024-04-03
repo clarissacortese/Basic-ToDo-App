@@ -1,8 +1,11 @@
-# React + Vite
+# Basic To-Do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I have created this simple app using React and Vite. It serves as a basic exercise for utilizing React with the useState hook and for passing props from parent elements to child elements and vice versa. For the interface, I've chosen Tailwind CSS.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started with this project:
+
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Start the development server with `npm run dev`
