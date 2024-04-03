@@ -39,16 +39,18 @@ function App() {
   // The doneItems, deleteDone, and addTodo props are passed to the DoneItemsList component.
   return (
     <>
-      <div className="container object-top">
-        <h1 className="text-center text-3xl font-bold">Today&apos;s Todo List</h1>
+      <div>
+        <h1 className="text-center text-3xl font-bold py-4 mt-4">Today&apos;s Todo List</h1>
         <Form addTodo={addTodo} />
       </div>
+      <div className="max-w-[60%] mx-auto">
       <TodoItemsList todos={todos} deleteTodo={deleteTodo} addDone={addDone} />
       <DoneItemsList
         doneItems={doneItems}
         deleteDone={deleteDone}
         addTodo={addTodo}
       />
+      </div>
     </>
   );
 }

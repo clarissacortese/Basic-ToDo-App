@@ -22,20 +22,20 @@ function TodoItem({ todo, deleteTodo, addDone }) {
   // When the "Done" button is clicked, handleDone is called.
   // When the "Delete" button is clicked, handleDelete is called.
   return (
-    <>
+    <div className="my-2">
       <MdCheckBoxOutlineBlank className="inline mr-2" />
       {todo}
       <Button
-        className="doneButton ml-2"
-        text="Done"
+        className="ml-2 rounded bg-teal-900 py-2 px-2 text-center text-white align-middle shadow-md shadow-gray-700/20 transition-all hover:shadow-none"
+        type="done"
         handleClick={handleDone}
       ></Button>
       <Button
-        className="deleteButton ml-2"
-        text="Delete"
+        className="ml-2 rounded bg-red-900 py-2 px-2 text-center text-white align-middle shadow-md shadow-gray-700/20 transition-all hover:shadow-none"
+        type="delete"
         handleClick={handleDelete}
       ></Button>
-    </>
+    </div>
   );
 }
 

@@ -7,7 +7,7 @@ function DoneItemsList({ doneItems, deleteDone, addTodo }) {
   // If the doneItems array has at least one item, render the list of done items.
   if (doneItems.length > 0) {
     return (
-      <>
+      <div className="flex flex-col items-start">
         <h2>The already-done list:</h2>
         <ul>
           {/* For each done item in the doneItems array, render a DoneItem component. */}
@@ -22,7 +22,7 @@ function DoneItemsList({ doneItems, deleteDone, addTodo }) {
             </li>
           ))}
         </ul>
-      </>
+      </div>
     );
   } else {
     // If the doneItems array is empty, render an empty fragment.

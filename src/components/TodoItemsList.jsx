@@ -7,8 +7,8 @@ function TodoItemsList({ todos, deleteTodo, addDone }) {
   // If the todos array has at least one item, render the list of todos.
   if (todos.length > 0) {
     return (
-      <>
-        <h2>Remeber to...</h2>
+      <div className="flex flex-col items-start mb-4">
+        <h2 className="text-left">Remeber to...</h2>
         <ul>
           {/* For each todo in the todos array, render a TodoItem component. */}
           {/* The todo, deleteTodo, and addDone props are passed to each TodoItem. */}
@@ -22,11 +22,11 @@ function TodoItemsList({ todos, deleteTodo, addDone }) {
             </li>
           ))}
         </ul>
-      </>
+      </div>
     );
   } else {
     // If the todos array is empty, render a message encouraging the user to add a todo.
-    return <h2>Nothing to do! Add something...</h2>;
+    return <h2 className="text-left mb-4">Nothing to do! Add something...</h2>;
   }
 }
 

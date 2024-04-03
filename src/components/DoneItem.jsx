@@ -22,20 +22,20 @@ function DoneItem({ done, deleteDone, addTodo }) {
   // When the "Move to to-do" button is clicked, handleMove is called.
   // When the "Delete" button is clicked, handleDelete is called.
   return (
-    <>
+    <div className="my-2">
       <MdOutlineCheckBox className="inline mr-2" />
       {done}
       <Button
-        className="repeatButton ml-2"
-        text='Move to "to-do"'
+        className="ml-2 rounded bg-teal-900 py-2 px-2 text-center text-white align-middle shadow-md shadow-gray-700/20 transition-all hover:shadow-none"
+        type='move to to-do'
         handleClick={handleMove}
       ></Button>
       <Button
-        className="deleteButton ml-2"
-        text="Delete"
+        className="ml-2 rounded bg-red-900 py-2 px-2 text-center text-white align-middle shadow-md shadow-gray-700/20 transition-all hover:shadow-none"
+        type="delete"
         handleClick={handleDelete}
       ></Button>
-    </>
+    </div>
   );
 }
 
